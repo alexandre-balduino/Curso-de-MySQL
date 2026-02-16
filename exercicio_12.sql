@@ -6,3 +6,8 @@ Só nos interessam os países que
 tiverem mais de 3 gafanhotos com 
 essa nascionalidade
 
+SELECT nacionalidade, COUNT(*) 
+FROM gafanhotos 
+WHERE nacionalidade != 'Brasil' 
+GROUP BY nacionalidade 
+HAVING COUNT(*) > 3; 
